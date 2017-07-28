@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Select your favorite browser:</p>
+<form >
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="Internet Explorer">Internet Explorer<br>
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="Firefox">Firefox<br>
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="Opera">Opera<br>
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="Google Chrome">Google Chrome<br>
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="Safari">Safari<br><br>
+
+  Your favorite browser is: <input type="text" id="result">
+  <input type="submit" value="Submit form">
+</form>
+<h1 id="result"></h1>
+<h1 id="demo"></h1>
+<script>
+function myFunction(browser) {
+    document.getElementById("result").value = browser;
+    document.getElementById('demo').innerHTML = browser;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+ <%= render 'careers/slider'%>
+<style>
+ #slides{
+  overflow: hidden;
+    width: 100%;
+    height: 62px;
+ }
+</style>
+<div>
+	<br>
+</div>
+  <link rel="stylsheet" href='/assets/blog.css'/>
+<div class="container">    
+    <div class="row"> 
+        <div class="col-md-3 content-left">
+           <div class="section2">
+	            <div class="recent">
+		           <h3></h3>
+		           <ul>
+		           <%= render 'layouts/blogsidebar' %>
+			           <!--li><a href="#">Aliquam tincidunt mauris</a></li>
+			           <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
+			           <li><a href="#">Nunc dignissim risus consecu</a></li>
+			           <li><a href="#">Cras ornare tristiqu</a></li-->
+	               </ul>
+	            </div>   
+		           <!--ul>
+		           <li><a href="#">October 2013</a></li>
+		           <li><a href="#">September 2013</a></li>
+		           <li><a href="#">August 2013</a></li>
+		           <li><a href="#">July 2013</a></li>
+		           </ul>
+		         </div-->
+		         <!-- class="categories">
+		         
+
+		           <!--h3>CATEGORIES</h3>
+		           <ul>
+		           <li><a href="#">Vivamus vestibulum nulla</a></li>
+		           <li><a href="#">Integer vitae libero ac risus e</a></li>
+		           <li><a href="#">Vestibulum commo</a></li>
+		           <li><a href="#">Cras iaculis ultricies</a></li>
+		           </ul>
+		         </div-->
+                <div class="clearfix"></div>
+            </div>
+             <div class="clearfix"></div>
+        </div>
+<!-- main content of this page -->
+		<div class="col-md-6 content-main">
+			    <% if @blog_photos %>
+			     <% @blog_photos.each do |blog_photo| %>
+		    <div class="col-md-12 single-main">         
+		        <div class="single-grid">
+		        	<div class="blog-show-image">
+		                <%= image_tag blog_photo.image.url(), class:"img-responsive"%>                                 
+		                <p><%= raw(@blog.description) %></p>
+		            </div>
+		            <% end%>
+		            <%end%>
+		          <ul class="comment-list">
+		             <h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
+		             <li><img src="images/avatar.png" class="img-responsive" alt="">
+		             <div class="desc">
+		                  <p>View all posts by: <a href="#" title="Posts by admin" rel="author">admin</a></p>
+		             </div>
+		             <div class="clearfix"></div>
+		             </li>
+		          </ul>
+			         <div class="content-form">
+				        <%= render @blog.comments %>
+				           <h3>Leave a comment</h3>
+				       <%= render 'comments/form'%>
+			         </div>
+		        </div>
+
+		        <!--div class="col-md-4 side-content">
+		         <div class="recent">
+		           <h3>RECENT POSTS</h3>
+		           <ul>
+		           <li><a href="#">Aliquam tincidunt mauris</a></li>
+		           <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
+		           <li><a href="#">Nunc dignissim risus consecu</a></li>
+		           <li><a href="#">Cras ornare tristiqu</a></li>
+		           </ul>
+		         </div>
+		         <div class="comments">
+		           <h3>RECENT COMMENTS</h3>
+		           <ul>
+		           <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+		           <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+		           <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
+		           </ul>
+		         </div>
+		         <div class="clearfix"></div>
+		         <div class="archives">
+		           <h3>ARCHIVES</h3>
+		           <ul>
+		           <li><a href="#">October 2013</a></li>
+		           <li><a href="#">September 2013</a></li>
+		           <li><a href="#">August 2013</a></li>
+		           <li><a href="#">July 2013</a></li>
+		           </ul>
+		         </div>
+		         <div class="categories">
+		           <h3>CATEGORIES</h3>
+		           <ul>
+		           <li><a href="#">Vivamus vestibulum nulla</a></li>
+		           <li><a href="#">Integer vitae libero ac risus e</a></li>
+		           <li><a href="#">Vestibulum commo</a></li>
+		           <li><a href="#">Cras iaculis ultricies</a></li>
+		           </ul>
+		         </div-->
+		         <div class="clearfix"></div>
+		    </div>
+		        <div class="clearfix"></div>
+		</div>
+   
+<!-- end main page -->
+<!-- left page content start -->
+		<div class="col-md-3 content-left">
+		    <div class="section2">
+		        <div class="recent">
+		           <h3></h3>
+		           <ul>
+		           <%= render 'layouts/blogsidebar' %>
+
+		           <!--li><a href="#">Aliquam tincidunt mauris</a></li>
+		           <li><a href="#"s>Vestibulum auctor dapibus  lipsum</a></li>    already in comment
+		           <li><a href="#">Nunc dignissim risus consecu</a></li>
+		           <li><a href="#">Cras ornare tristiqu</a></li-->
+		           </ul>
+		        </div>
+
+		        
+
+		    
+		           <!--ul>
+		           <li><a href="#">October 2013</a></li>
+		           <li><a href="#">September 2013</a></li>    already in comment
+		           <li><a href="#">August 2013</a></li>
+		           <li><a href="#">July 2013</a></li>
+		           </ul>
+		         </div-->
+		         <!-- class="categories">
+		         
+
+		           <!--h3>CATEGORIES</h3>
+		           <ul>
+		           <li><a href="#">Vivamus vestibulum nulla</a></li>
+		           <li><a href="#">Integer vitae libero ac risus e</a></li>     already in comment
+		           <li><a href="#">Vestibulum commo</a></li>
+		           <li><a href="#">Cras iaculis ultricies</a></li>
+		           </ul>
+		         </div-->
+		           <div class="clearfix"></div>
+		    </div>
+				    <div class="comments">
+			               <h3><b>RECENT COMMENTS</b></h3>
+			               <hr class="hr1">
+				           <ul>
+					            <% @blog.each do |blog|%>
+									   <% blog.comments.each do |comment|%>
+									    <%= link_to comment.gopi, blog_path(blog) %>
+									  <% end %>
+									<% end %>  
+						           <!--li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+						           <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>          already in comment
+						           <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li-->
+				           </ul>
+		            </div>
+                       <div class="clearfix"></div>
+			        <div class="archives">
+			           <h3><b>ARCHIVES</b></h3>
+			           <hr class="hr1">          
+			                <% @blog_months.sort.reverse.each do |month, blogs| %>    
+			                <h3><%=h link_to month.strftime("%B %Y"), blog_path(blogs), :class => "fa fa-arrow-right"%></h3>  
+			               <% end %>
+			        </div>
+
+    
+           <!--ul>
+           <li><a href="#">October 2013</a></li>
+           <li><a href="#">September 2013</a></li>    already in comment
+           <li><a href="#">August 2013</a></li >
+           <li><a href="#">July 2013</a></li>>
+
+           </ul>
+         </div-->
+         <!-- class="categories">
+         
+
+           <!h3>CATEGORIES</h3>
+           <ul>
+           <li><a href="#">Vivamus vestibulum nulla</a></li>
+           <li><a href="#">Integer vitae libero ac risus e</a></li>    already in comment
+           <li><a href="#">Vestibulum commo</a></li>
+           <li><a href="#">Cras iaculis ultricies</a></li>
+           </ul>
+         </div-->
+		     <div class="clearfix"></div>
+		</div>
+		<!-- end left side page content -->
+	</div>
+</div>

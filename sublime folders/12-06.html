@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>12-06-2107</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style type="text/css">
+	.mySlides{
+display: none;
+	}
+</style>
+<body>
+<h2 class="w3-center">Automatic display images</h2>
+<div class="w3-content w3-section" style="max-width: 500px;">
+	<img src="img1.jpg"  alt ="img1"  class="mySlides" style="width: 100% height:100%">
+	<img src="img2.jpg"  alt="img2"  class="mySlides" style="width: 100% height:100%">
+	<img src="img3.jpg"  alt="img3" class="mySlides" style="width: 100% height:100%">
+</div>
+<script>
+	var Index = 0;
+	carousel();
+
+	function carousel(){
+		var i;
+		var x = document.getElementsByTagName('img');
+		for (var i = 0; i < x.length; i++) {
+			x[i].style.display="none";
+		}
+
+		Index++;
+    if (Index > x.length) {
+    	
+    	Index = 1
+    } 
+       
+    x[Index-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+	
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- this script got from www.javascriptfreecode.com-Coded by: Krishna Eydat -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<SCRIPT LANGUAGE="JavaScript">
+
+var yourtext = "* YOUR MESSAGE HERE! *";
+var wedge1="                        ";
+var wedge2="                        ";
+var message1=wedge1+yourtext+wedge2;
+var dir = "lside";
+var speed = 50;
+
+function bouncey() {
+
+	if (dir == "lside") {
+		message2=message1.substring(2,message1.length)+"  ";
+		window.status=message2;
+		setTimeout("bouncey();",speed);
+		message1=message2;
+
+		if (message1.substring(0,1) == "*") {
+			dir="rside";
+		}
+	}
+
+	else {
+		message2="  "+message1.substring(0,message1.length-2);
+		window.status=message2;
+		setTimeout("bouncey();",speed);
+		message1=message2;
+		if (message1.substring(message1.length-1,message1.length) == "*") { 
+			dir="lside";
+		}
+	}
+}
+
+// -- End Hiding Here -->
+</SCRIPT>
+
+<body onLoad="bouncey()">
+</body>
+<br>
+<font face="Tahoma"><a target="_blank" href="http://www.javascriptfreecode.com/"><span style="font-size: 8pt; text-decoration: none">JavaScript Free Code</span></a></font>

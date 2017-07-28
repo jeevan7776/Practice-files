@@ -1,0 +1,37 @@
+ <!DOCTYPE html>  
+<html>  
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+<head>
+	<title> month</title>
+</head>
+<body>  
+<style type="text/css">
+	.dates{
+		display:  inline;
+	}
+</style>
+<div ng-app="myApp" ng-controller="myCtrl">  
+<h4>MONTH:<select ng-model="selectedMonth" ng-options="x for x in months"></select>
+DATE:<select ng-model="selectedDate" ng-options="x for x in dates"></select>
+YEAR:<select ng-model="selectedYear" ng-options="x for x in years"></select></h4>
+<br>
+<h4>HOURS:<select ng-model="selectedHour" ng-options="x for x in hours"></select>
+MINUTES:<select ng-model="selectedMinute" ng-options="x for x in minutes"></select>
+MERIDIEM:<select ng-model="selectedMeridiem" ng-options="x for x in meridiem"></select></h4>
+<h1>{{selectedMonth}} : {{selectedDate}} : {{selectedYear}}</h1>
+<h1>{{selectedHour}} : {{selectedMinute}} {{selectedMeridiem}}</h1>
+</div>  
+<script>  
+var app = angular.module('myApp', []);  
+app.controller('myCtrl', function($scope) {  
+    $scope.months = ["JAN", "FEB", "MAR", "APR", "MAY","JUNE", "JULY", "AUG", "SEPT", "OCT","NOV", "DEC",];   
+    $scope.dates =  ["1", "2", "3" ,"4", "5", "6", "7" ,"8","9","10","11", "12", "13" ,"14", "15", "16", "17" ,"18","19","20","21", "22", "23" ,"24", "25", "26", "27" ,"28","29","30","31"];
+     $scope.years =  ["2001", "2002", "2003","2004","2005", "2006", "2007", "2008","2009","2010", "2011", "2012", "2013","2014","2015","2016","2017"];
+     $scope.hours = ["1", "2", "3" ,"4", "5", "6", "7" ,"8","9","10","11", "12"];
+     $scope.minutes =  ["1", "2", "3" ,"4", "5", "6", "7" ,"8","9","10","11", "12", "13" ,"14", "15", "16", "17" ,"18","19","20","21", "22", "23" ,"24", "25", "26", "27" ,"28","29","30","31", "32", "33" ,"34", "35", "36", "37" ,"38","39","40","41", "42", "43" ,"44", "45", "46", "47" ,"48","49","50","51", "52", "53" ,"54", "55", "56", "57" ,"58","59","60"];
+     $scope.meridiem =["AM","PM"];
+});  
+
+</script>  
+</body>  
+</html>  

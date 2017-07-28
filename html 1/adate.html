@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angularjs</title>
+  <link rel="icon" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  
+</head>
+<body>
+<script>
+   angular.module('dateInputExample', [])
+     .controller('DateController', ['$scope', function($scope) {
+       $scope.example = {
+         value: new Date(2013, 9, 22)
+       };
+     }]);
+</script>
+
+<div ng-app="">
+<form name="myForm" ng-controller="DateController as dateCtrl">
+   <label for="exampleInput">Pick a date in 2013:</label>
+   <input type="date" id="exampleInput" name="input" ng-model="example.value"
+       placeholder="yyyy-MM-dd" min="2013-01-01" max="2013-12-31" required />
+   <div role="alert">
+     <span class="error" ng-show="myForm.input.$error.required">
+         Required!</span>
+     <span class="error" ng-show="myForm.input.$error.date">
+         Not a valid date!</span>
+    </div>
+    <tt>value = {{example.value | date: "yyyy-MM-dd"}}</tt><br/>
+    <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
+    <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
+    <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
+    <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
+</form>
+</div>
+<script type="text/javascript">
+  var value = element(by.binding('example.value | date: "yyyy-MM-dd"'));
+var valid = element(by.binding('myForm.input.$valid'));
+
+// currently protractor/webdriver does not support
+// sending keys to all known HTML5 input controls
+// for various browsers (see https://github.com/angular/protractor/issues/562).
+function setInput(val) {
+  // set the value of the element and force validation.
+  var scr = "var ipt = document.getElementById('exampleInput'); " +
+  "ipt.value = '" + val + "';" +
+  "angular.element(ipt).scope().$apply(function(s) { s.myForm[ipt.name].$setViewValue('" + val + "'); });";
+  browser.executeScript(scr);
+}
+
+it('should initialize to model', function() {
+  expect(value.getText()).toContain('2013-10-22');
+  expect(valid.getText()).toContain('myForm.input.$valid = true');
+});
+
+it('should be invalid if empty', function() {
+  setInput('');
+  expect(value.getText()).toEqual('value =');
+  expect(valid.getText()).toContain('myForm.input.$valid = false');
+});
+
+it('should be invalid if over max', function() {
+  setInput('2015-01-01');
+  expect(value.getText()).toContain('');
+  expect(valid.getText()).toContain('myForm.input.$valid = false');
+});
+</script>
+</body>
+</html>

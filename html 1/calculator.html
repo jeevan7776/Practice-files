@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="">
+ 
+<input type="text" class="form-control" ng-model="dt" 
+         datepicker-mode="'year'"
+    min-mode="year"  min-date="minDate" 
+    show-weeks="false"
+    datepicker-popup="{{format}}"  is-open="opened" ng-focus="open($event)"
+          date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+</div>
+</body>
+</html>

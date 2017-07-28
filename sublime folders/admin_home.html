@@ -1,0 +1,19 @@
+<div class="navbar-collapse collapse">
+              <form class="navbar-form navbar-right" role="form" action="" method="post">
+              {% csrf_token %}
+                <div class="form-group {% if login_failed %} has-error {% endif %}">
+                {{ form.username.label_tag }}
+                  <input type="text" placeholder="Uname or Email" class="form-control input-sm" {% if login_failed %}
+                         id = "inputError" {% endif %} name="username">
+                </div>
+                <div class="form-group {% if login_failed %} has-error {% endif %}">
+                  <input type="password" placeholder="Password" class="form-control input-sm" name="password"
+                  {% if login_failed %} id = "inputError" {% endif %}>
+                </div>
+                <button type="submit" class="btn btn-success">Sign in</button><br>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <label><input type="checkbox" value="remember-me">Remember me</label>
+                    <label><a class="help-inline" href="{% url 'django.contrib.auth.views.password_reset' %}">Forgot password?</a></label>
+              </div>
+            </div>

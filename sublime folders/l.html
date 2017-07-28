@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+  h2:hover,h3:hover{
+    color:red;
+  }
+  b:hover{
+    color:red;
+  }
+  .navbar-default,.colmd{
+    background-color: rgba(8, 105, 99, 0.29);
+  }
+  h2{
+    font-size: 45px;
+    margin-top: -2px;
+  }
+</style>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><h2>MALIBU</h2></a>
+    </div>   
+        <form class="navbar-form navbar-right">
+            <div class="form-group">                        
+              <input type="text" class="form-control" name="username" placeholder="Username">
+            </div>              
+                <div class="form-group">
+                  <input type="text" class="form-control" name="password" placeholder="Password">
+                </div>                   
+            <button type="submit" class="btn btn-danger navbar-btn">Sign In</button>
+        </form>
+    </div>
+</nav>
+<style>
+    .small-top
+    {
+        margin-bottom: 27px;
+    }
+   
+    .form{
+      padding: 30px;
+    }
+.padd{
+  padding-top: 40px;
+}
+    
+</style>
+<div class="container">
+    <div class="row small-top ">
+        <div class="col-md-6"><br><br>
+          <img src="website.jpg" class="img-responsive" />
+        </div>
+        <div class="col-md-6 colmd">
+                <h3 class="form">SIGN UP</h3>
+                <form>
+                    <div class="row small-top">
+                        <div class="col-md-12">
+                            <label><b>Email</b></label>
+                            <input type="text" class="form-control" placeholder="Enter Email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="row small-top">
+                        <div class="col-md-12">
+                            <label><b>Password</b></label>
+                            <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                        </div>
+                    </div>
+
+                    <div class="row small-top">
+                        <div class="col-md-12">
+                            <label><b>Repeat Password</b></label>
+                            <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
+                            <input type="checkbox" checked="checked"> Remember me
+                        </div>
+                    </div>        
+                    <div class="row small-top">
+                        <div class="col-md-4 form-group">
+                            <button type="submit" class="btn btn-danger">Sign Up</button>
+                        </div>
+                    </div>        
+               </form>
+    </div>
+  </div>
+</div>
+<div>
+</div>  
+<div class="col-md-6 col-md-offset-2 padd">
+<footer>
+  <p><b>&copy; 2017 PROJECT MANAGEMENT TOOLS. All Rights Reserver | Design by MALIBU IT LABS</b></p>
+</footer>
+</div>
+
+
+</body>
+</html>

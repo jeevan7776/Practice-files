@@ -1,0 +1,118 @@
+
+<html>
+    <head>
+        <title> thumbnail</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        .rowtop{
+     margin-top: 15px;
+        
+        }
+        .col-md-4 img{
+            height: 180px !important;
+            width: 100%; 
+        }
+        .caption{
+            background-color: lightblue;
+            color: white;
+        }
+        .thumbnail{
+                background-color: #13dec0;
+        }
+        body{
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+             url("http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fresh-Background-Images-For-Business-Websites.jpg");
+       }
+       .p{
+           color: white;
+       }
+       .cm{
+           background: red;
+           padding: 10px;
+           border: 1px solid yellow;
+       }
+    </style>
+        <body>
+            <div class="container">  
+                <div class="row rowtop">                    
+                    <div class="col-md-4">
+                        <div class = "thumbnail">
+                        <a href="01_jpg.html" target="_blank"><img src="01.jpg" class="img-responsive"></a>
+                        <div class="caption">
+                        <p>thumbnail class is added out side of the img tag</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                        <a href="01_jpg.html" target="_blank"><img src="02.jpg" class="img-responsive"></a>
+                        <div class="caption">
+                        <p>thumbnail class is added out side of the img tag</p>  
+                        </div>                      
+                    </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                        <a href="01_jpg.html" target="_blank"><img src="03.jpg" class="img-responsive"></a>
+                        <div class="caption">
+                        <p>thumbnail class is added out side of the img tag</p> 
+                        </div>                       
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row rowtop">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <div class="img-thumbnail">
+                                <a href="01_jpg.html" target="_blank"><img src="01.jpg" class="img-responsive"></a>
+                            <div class="caption">
+                        <p>img-thumbnail class is added out side of img tag</p>                                 
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">     
+                        <div class="thumbnail">                   
+                        <a href="01_jpg.html" target="_blank"><img src="02.jpg" class="img-responsive img-circle img-thumbnail"></a>
+                        <div class="caption">
+                        <p>img-circle class is added inline of img tag</p> 
+                        </div>   
+                        </div>                    
+                    </div>
+                    <div class="col-md-4">
+                       <div class="thumbnail">
+                        <a href="01_jpg.html" target="_blank"><img src="03.jpg" class="img-responsive img-rounded"></a>
+                        <div class="caption">
+                        <p>img-rounded class is added inline of img tag</p>                           
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <button class="btn btn-info" data-toggle="collapse" data-target="#clp">Click on me! </button>
+                <div id="clp" class="collapse out cm">
+                    <p class="p">hi when you click on click me! button then it will show the text for you
+                        again when you click on that button it will hide the text </p>
+                </div>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#clpp">Click on me! </button>
+                <div id="clpp" class="collapse in cm">
+                    <p class="p">hi when you click on click me! button then it will show the text for you
+                        again when you click on that button it will hide the text </p>
+                </div>
+
+                <button  class="btn  btn-danger" data-toggle="collapse" data-target="#demo">Collapsible</button>
+                <div id="demo" class="collapse cm">
+                <p>Lorem ipsum dolor text....</p>
+                </div>
+        </body>    
+</html>

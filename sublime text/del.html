@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+<div ng-init="countries = [
+{locale:'en-IND',name:'India'},
+{locale: 'en-AUS',name:'Australia'},
+{locale: 'en-PAK', name:'Pakistan'}
+]">
+<ol>
+   <li ng-repeat = "countries in countries">
+   {{ 'Country: ' + countries.name + ', Locale: ' +  countries.locale }}
+      
+   </li>
+   
+  
+</ol>
+</div>
+</body>

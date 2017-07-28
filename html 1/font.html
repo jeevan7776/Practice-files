@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="theapp">
+<head>
+    <title>App</title>
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body ng-controller="FormController as form">
+    <h1>Hello</h1>
+    <form name="theForm">
+        <select ng-model="font" ng-options="font.face for font in fonts"></select>
+    </form>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            angular.module("theapp", [])
+                .controller("FormController", ["$scope", function ($scope) {
+                    $scope.fonts = [
+                        { face: "sans-serif" },
+                        { face: "Arial" },
+                        { face: "Tahoma" },
+                        { face: "Trebuchet MS" },
+                        { face: "Verdana" },
+                        { face: "serif" },
+                        { face: "Times" },
+                        { face: "Georgia" },
+                        { face: "monospace" },
+                        { face: "Courier" }
+                    ];
+                    $scope.font = $scope.fonts[10];
+                }]);
+        })();
+    </script>
+</body>
+</html>

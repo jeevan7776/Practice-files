@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>30-06-2017</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	.top{
+		margin-top: 35px;
+	}
+</style>
+
+<body>
+<!--  getElementById(). it is the method -->
+<!-- with (id="demo") it can be used to find the html element and for changing the content of the html to another content using (.innerHTML="text" )-->
+<!-- JavaScript accepts both double and single quotes: -->
+
+<!-- first -->
+<div class="container top">
+<p id="demo1">MALIBU IT LABS</p>
+<button class="btn btn-primary" onclick="getElementById('demo1').innerHTML='INNOVATION INFORMATION IMAGINATION'">CLICK ME!</button>
+</div>
+<!-- second -->
+<div class="container top">
+<button onclick="document.getElementById('demo').src='bulboff.jpg'" class="btn btn-success">Turn off</button>
+<img src="bulboff.jpg" id="demo" width="100px">
+<button onclick="document.getElementById('demo').src='bulbon.jpg'" class="btn btn-success">Turn on </button>
+</div>
+<!-- third -->
+<div class="container top">
+<h2 id="demo2">MALIBU IT LABS</h2>
+<button class="btn btn-danger" onclick="getElementById('demo2').style.color='red'">Click me</button>
+</div>
+<!-- fourth -->
+<div class="container top">
+<h2 id="demo3" style="display: none;">MALIBU IT LABS</h2>
+<button class="btn btn-info" onclick="document.getElementById('demo3').style.display='block'">CLICK ME!</button>
+</div>
+<!-- fifth -->
+
+	
+</div>
+</body>
+</html>

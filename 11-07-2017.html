@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>11-07-2017</title>
+</head>
+<body>
+<div id="N">
+<input type="radio" name="names" value="JEEVAN"  onclick="myF(this.value)">FirstName<br>
+<input type="radio" name="names" value="REDDY" onclick="myF(this.value)" >LastName<br>
+<input type="radio" name="names" value="MALIBU" onclick="myF(this.value)" >Company<br>
+<input type="radio" name="names" value="VIZAG" onclick="myF(this.value)" >City<br>
+<input type="button" name="names" value="Company" onclick="myF(this.value)">
+</div>
+<script type="text/javascript">
+	function myF(names) {
+		var names = document.getElementById('N').value = names;
+		document.getElementById("Y").innerHTML= names;
+		// style using js
+		document.body.style.color = "red";
+		 document.getElementById("Y").style.backgroundColor = "lightblue";		 
+		 document.getElementById("Y").style.color = "white";
+			}
+</script>
+<h1 id="Y"></h1>
+
+</body>
+</html>

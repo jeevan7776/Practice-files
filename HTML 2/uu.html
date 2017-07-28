@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="file" onchange="previewFile()"><br>
+<div id="imgDiv">    <img id="image1" src="" height="200" alt="Image preview..."></div>
+    <a href="#">remove image </a>
+
+      </body>
+    </html>
+
+<script>
+function previewFile() {
+
+  var d = document.getElementById('imgDiv');
+
+  var olddiv = document.getElementById("image1");
+
+  d.removeChild(olddiv);
+
+}
+
+</script>
+
+</body>
+</html>

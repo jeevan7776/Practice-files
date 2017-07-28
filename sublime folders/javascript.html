@@ -1,0 +1,475 @@
+
+	<script type="text/javascript">
+			document.write("hello javatpoint");    /*output hello javatpoint*/
+		</script>
+	</br>
+
+
+  <script type="text/javascript">
+ {
+	alert("javascript");           /*alert type javascript*/
+}
+</script>
+
+
+
+<script type="text/javascript">
+
+	document.write("front-end");   /* output front-end*/
+
+</script>
+
+
+<script type="text/javascript">
+	var A = 10;
+	var B = 20;                          /*output 20*/  
+document.write(B);
+</script>
+
+<!-- <form>
+	<input type="button" value="me"  onclick="me()"/>
+	<input type="button" value="you" onclick="you()">
+</form> -->
+
+<!-- local variable -->
+<script>  
+
+function abc(){  
+window.XXX = "jeevan reddy 7776";     //local variable      /*if we write window.value=90 the we can call this variable globally*/
+document.writeln(x);                                /*window.string is used to display the name*/
+}
+abc();
+</script>  
+
+<!-- global variable -->
+<script type="text/javascript">
+var Y = 1000;
+var Z = "yalla";
+var X=Y+Z;	
+var M = 25;
+	function yy(){
+	document.writeln(Y);
+	}
+	
+	function zz(){
+		document.write(Z);
+
+	}
+	function mn(){
+		document.writeln(B);
+
+	}
+zz();
+yy();
+mn();
+
+	
+</script>
+
+<!-- global variable -->
+<script type="text/javascript">
+
+	function mm(){
+		document.write(X);
+	}
+	mm();
+</script>
+
+		<script type="text/javascript">	
+				alert(window.XXX); /*here if we declare any global value the value can appear in window*/
+		                            /*if we want to use local variable the declare window.value here and at the lacal declare function*/
+		</script>
+
+<h1 id="demo"></h1>
+<h2 id="d"></h2>
+
+<script type="text/javascript">
+	var object={firstName:"jeevan",lastName:"reddy"};
+	document.getElementById("demo").innerHTML=object.firstName;
+	document.getElementById("d").innerHTML=object.lastName;
+</script>
+
+
+<script type="text/javascript">
+function mno(){
+	document.getElementById("da").innerHTML=Boolean(22<29);
+	// document.getElementById("do").innerHTML=Boolean(22>29);
+}
+
+</script>
+<button onclick="mno()">click</button>
+<h1 id ="da">TRUE or FALSE</h1>
+
+
+
+<script type="text/javascript">
+var x=22+552;
+	function kali(){
+		document.getElementById("mad").innerHTML=x;
+	}
+	kali();
+</script>
+
+<button onclick="kali()">get</button>
+<h1 id="mad">get the value of X</h1>
+
+
+<script type="text/javascript">
+
+	if(11>10){
+		document.write("malibu");
+	}
+	else{
+		document.write("itlabs");
+	}
+</script>
+
+<script type="text/javascript">
+	if(1==10)
+	{
+		document.write("1 is equal to 1");
+
+	}
+	else if (5==5) {
+		document.write("5 is equal to 5");
+	}
+	else if (10!==9)
+	 {
+	 	document.write("10 is not equal to 9");
+	 } 
+	 else {
+	 	document.write("no condition is true");
+	 }
+</script>
+</br>
+
+
+<script type="text/javascript">
+var string = "Arun";
+	if (string=="Arune") {
+		document.write("yalla");
+	}
+	else if(string=="Arun") {
+document.write("jeevanreddy");
+
+	}
+else if (string=="Anvesh") {
+	document.write("reddy");
+}
+else{
+	document.write("no string is correct");
+}
+</script>
+
+<script type="text/javascript">
+	var value=10+20;
+	switch(value){
+		case 20:
+		value=1;
+	   break;
+	   case 30:
+	   value=2;
+	   break;
+	   default:
+	   value="no value";
+	}
+document.write(value);
+
+
+</script>
+
+<script>  
+var grade='A';  
+var result;  
+switch(grade){  
+case 'A':  
+result=" A Grade";  
+case 'B':  
+result=" B Grade";  
+case 'C':  
+result=" C Grade";  
+default:  
+result=" No Grade";  
+}  
+document.write(result);  
+</script>  
+
+<script type="text/javascript">
+	var i=1;
+	while(i<=10)
+	{
+		document.write(i+"<br>");
+		i++;
+	}
+</script>
+
+<script type="text/javascript">
+	var i=20;
+	do{
+		document.write(i+"<br>");
+		i++;
+		}
+		while(i<=25);
+</script>
+
+<script type="text/javascript">
+	for(i=100;i<=110;i++)
+	{
+		document.write(i+"<br>")
+	}
+</script>
+<script type="text/javascript">
+	function get(num){
+		alert(num*num*num);
+	}
+</script>
+<form>
+	<input type="button" value="click" onclick="get(4)"/>
+</form>
+<button onclick="kali()">get</button>
+<h1 id="mad"></h1>
+<script type="text/javascript">
+	function msg1(){
+		alert("hello");
+	}
+	function msg2(){
+		alert("hi");
+	}
+	
+</script>
+<input type="button" value="Hello" onclick="msg2()" />
+<!-- <input type="button"  /> -->
+<!-- object literal -->
+<script>
+	emp1={id:103,name:"jeevan",salary:1000}	
+	document.write(emp1.id+" "+emp1.salary);
+</script>
+<!-- <script>  
+emp={id:102,name:"Shyam Kumar",salary:40000}  
+document.write(emp.id+" "+emp.name+" "+emp.salary);  
+</script> -->
+<!-- <script type="text/javascript">
+	name1={firstname:"jeevan",middlename:"reddy",lastname:"yalla"}
+	document.write(name1.firstname+" "+name1.middlename+" "+name1.lastname);
+</script> -->
+<!-- instance of object -->
+<script type="text/javascript">
+	var malibu = new Object();
+	malibu.name="jeevan";
+	malibu.id=103;
+	malibu.salary=4000;
+	document.write(malibu.name+" "+malibu.id+" "+malibu.salary);
+</script>
+<!-- <h1 id="demo">Click the button </h1>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("demo");
+    x.style.fontSize = "25px"; 
+    x.style.color = "red"; 
+    x.style.padding ="30px";	
+}
+</script>
+
+<button onclick="myFunction()">Click Me!</button>
+ -->
+
+<script>  
+function emp(id,name,salary,pf){  
+this.id=id;  
+this.name=name;  
+this.salary=salary;
+this.pf=pf;  
+}  
+me=new emp(103,1245,30000,2000);  
+ne=new emp(104,"jeevan",5000,1000);
+  
+document.write(me.id+" "+me.name+" "+me.salary+" "+me.pf);  
+document.write(ne.id+" "+ne.name+" "+ne.salary+" "+ne.pf);
+</script>  
+<!-- array -->
+<br>  
+
+
+<script type="text/javascript">
+	var emp =["jai","mohan","praveen"];
+   for(i=0;i<emp.length;i++){
+   	document.write(emp[i]+"<br/> ");
+   }
+</script>                          <!-- in array for(i=0;i<emp.length;i++){document.write(emp[i]+"");} this are the same for each and every object creation  -->
+
+<script type="text/javascript">
+	var emp=new Array();
+	emp[0]="jeevan";
+	emp[1]="reddy";
+	emp[2]= 1245;
+	for(i=0;i<emp.length;i++){
+		document.write(emp[i]+" <br/>");
+	}
+</script>
+
+<script type="text/javascript">
+	var emp = new Array("jeevan","yalla","reddy");
+	for(i=0;i<emp.length;i++){
+		document.write(emp[i]+"<br/>");
+	}
+</script>
+<script type="text/javascript">
+	var yall="hi hello this is jeevajn"
+	document.write(yall);
+</script>
+<br>
+<script type="text/javascript">
+	var yee=new String("hi gelle");
+	document.write(yee);
+</script>
+
+
+<!-- <script type="text/javascript">
+
+	function trigger()
+
+	{
+
+	document.getElementById("hover").addEventListener("mouseover", popup);
+
+	function popup()
+
+	{
+
+	alert("Welcome to my WebPage!!!");
+
+	}
+
+	}
+
+	</script>
+
+	<style>
+
+	p
+
+	{
+
+	     font-size:50px;
+
+	     position: fixed;
+
+	     left: 550px;
+
+	     top: 300px;
+	     color: red;
+
+	}
+
+	</style>
+
+	
+
+	<body  onload="trigger();">
+
+	<h1 id="hover">Welcome!!!</h1> -->
+
+<!-- <h1 id=dateString></h1>
+<script type="text/javascript">
+	var dateString = new Date().setMonth();
+	document.getElementById("dateString").innerHTML=dateString;
+</script> -->
+<!-- <style type="text/css">
+	/*h1{
+		padding: 25px;
+		text-align: center;
+  background-color: #fff;	
+  color: #202c2d;
+  text-shadow:
+    0px 1px #808d93,
+    -1px 0px #cdd2d5,
+    -1px 2px #808d93,
+    -2px 1px #cdd2d5,
+    -2px 3px #808d93,
+    -3px 2px #cdd2d5,
+    -3px 4px #808d93,
+    -4px 3px #cdd2d5,
+    -4px 5px #808d93,
+    -5px 4px #cdd2d5,
+    -5px 6px #808d93,
+    -6px 5px #cdd2d5,
+    -6px 7px #808d93,
+    -7px 6px #cdd2d5,
+    -7px 8px #808d93,
+    -8px 7px #cdd2d5;
+}
+
+</style> -->
+<p id=y></p>
+<script type="text/javascript">
+	var y = new Date();
+	document.getElementById("y").innerHTML=y;
+</script>
+
+
+
+Current Time: <h1 id="txt"></h1>  
+<script>  
+window.onload=function(){getTime();}
+function getTime(){  
+var today=new Date();  
+var h=today.getHours();  
+var m=today.getMinutes();  
+var s=today.getSeconds();  
+ var d=today.getDate();  
+ var month=today.getMonth()+1;  
+ var year=today.getFullYear();                                      // add a zero in front of numbers<10  
+// m=checkTime(m);  
+// s=checkTime(s);  
+document.getElementById('txt').innerHTML=h+":"+m+":"+s+"<br>"+d+":"+month+":"+year;  
+setTimeout(function(){getTime()},1000);  
+} 
+
+//setInterval("getTime()",1000);//another way  
+// function checkTime(i){  
+// if (i<10){  
+//   i="0" + i;  
+//  }  
+// return i;  
+// }  
+</script>  
+<h1 id="s1"></h1>
+<script>
+document.getElementById('s1').innerHTML=Math.sqrt(20);
+</script>
+
+
+<h1 id="s2"></h1>
+<script type="text/javascript">
+	document.getElementById("s2").innerHTML=Math.random();
+
+</script>
+
+<h2 id="s3"> </h2>
+<script type="text/javascript">
+	document.getElementById("s3").innerHTML=Math.pow(2,2);
+</script>
+<h2 id="s4"></h2>
+<h2 id="s5"></h2>
+<h2 id="s6"></h2>
+<h1 id="s7"></h1>
+<script type="text/javascript">
+	document.getElementById("s4").innerHTML=Math.floor(5.9);/*after point if u give 0-9 it takes the present value*/
+	document.getElementById("s5").innerHTML=Math.ceil(6.2);/*after point if u give 0-9 the value will be increment*/
+	document.getElementById("s6").innerHTML=Math.round(7.5);/*after point 0-4 the value will be not change and after 5-9 the value increase */
+	document.getElementById("s7").innerHTML=Math.abs(5*5);/*this is absolute value what ever u give value it prints the expected output*/
+</script>
+<script type="text/javascript">
+	var x=123e6;
+	var y=123e-5;
+	document.write(x+"<br/>"+y);
+</script>
+<p id="mo"></p>
+
+<p><strong>Note:</strong> This example is opened in a new frame and will be treated as a new "session".</p>
+
+<script>
+var x = history.back();
+document.getElementById("mo").innerHTML = x;
+</script>

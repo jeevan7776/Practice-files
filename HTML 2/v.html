@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>image icon tab</title>
+	<link rel="icon" href="MNE.ico">
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+ 
+  <!-- new date and time picker -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/css/material.min.css" />
+		<link rel="stylesheet" href="./css/bootstrap-material-datetimepicker.css" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	   <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/js/material.min.js"></script>
+		<script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+		<script type="text/javascript" src="./js/bootstrap-material-datetimepicker.js"></script>
+
+  <!-- end script -->
+  <!-- style newdate -->
+<style>
+body{
+	padding-top: 1em;
+}
+				
+			.form-control-wrapper 
+			{
+				margin: 10px 20px;
+			}
+			
+			
+			@media(max-width: 100px)
+			{
+				.well { margin : 0}
+			}
+			
+				.form-control {
+    
+                width: 8%;
+			}
+		</style>
+  <!-- end -->
+  <!-- script -->
+  <script>
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+			ga('create', 'UA-60343429-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+		<script type="text/javascript">		
+		$(document).ready(function()
+		{
+			$('#date').bootstrapMaterialDatePicker
+			({
+				time: false,
+				clearButton: true
+			});
+
+			$('#time').bootstrapMaterialDatePicker
+			({
+				date: false,
+				shortTime: false,
+				format: 'HH:mm'
+			});
+				});
+	
+		</script>
+  <!-- end -->
+  <!-- selection option -->
+  <script>  
+var app = angular.module('myApp', []);  
+app.controller('myCtrl', function($scope) {  
+    $scope.names = ["Andhrapradesh", "Telangana", "Goa", "HIMACHALPRADESH", "Assam","Bihar"];  
+    $scope.event = "event";
+});  
+</script>  
+  <!-- script end -->
+   <style>  
+         table, td , td {  
+            border: 0px solid grey;  
+            border-collapse: collapse;  
+            padding:6px;  
+            }         } 
+        /* button, input, select, textarea {
+   
+    padding: 6px;
+}*/
+/*body{
+	background-color: #f2f2f2;
+}*/
+     
+      </style>  
+<body>       
+<div class="container">
+<div ng-app="myApp" ng-controller="myCtrl"> 
+<h4>HELLO! {{event}}</h4>
+<P>{{host}}</P> 
+<P>{{phone}}</P>
+<P>{{location}}</P>
+<P>{{address}}</P>
+<P>{{city}}</P>
+<h3>{{state}}</h3>
+<P>{{zipcode}}</p>
+<p>{{date}}</p>
+<p>{{time}}</p>
+<p>{{message}}</p>
+		<table border="1">
+			<tr>  
+			<td>*Event Title:</td> 
+			<td><input type="text" ng-model="event"></td>		
+			</tr>
+
+			<tr>			
+			<td>*Host:</td>
+			<td><input type="text" ng-model="host"></td>
+			</tr>
+		
+			<tr>
+			<td>*Phone:</td>
+			<td><input type="text" ng-model="phone"></td>
+			</tr>
+			
+			<tr>
+			<td>Location Name:</td>
+			<td><input type="text" ng-model="location"></td>
+			</tr>
+			
+			<tr>
+		    <td>Address:</td>				
+			<td><input type="text" ng-model="address"></td>
+			</tr>
+
+				<tr>
+				<td>City:</td>
+				<td><input type="text" ng-model="city" placeholder="city"></td>
+				</tr>
+				
+				<tr>
+				<td>State:</td>
+			    <td><select type="text"  ng-model="state" ng-options="x for x in names"></select></td>
+			    </tr>
+			
+			<tr>
+			<td>Zipcode:</td>
+			<td><input type="text" ng-model="zipcode" placeholder="zipcode"></td>
+			</tr>
+			
+			<tr>
+			<td>Date:</td>
+		    <td><input type="text" id="date" ng-model="date" placeholder="date"></td>
+			</tr>
+				
+				<tr>
+				<td><p>Time:</p></td>
+				<td><input type="text" id="time" ng-model="time" placeholder="Time"></td>
+				</tr>
+				
+				<tr>
+				<td>Messages:</td>
+				<td><textarea rows="5" cols="50" ng-model="message"></textarea></td>
+				</tr>
+				    <br>
+				    </div>
+				    </div>
+</body>
+</html>			
+				
+			
+		
+						
+				
+				
+				
+		
+	
+						
+					
+
+

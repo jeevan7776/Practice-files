@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="radio" name="Gender" value="Male" onclick="myFunction(this.value)" >MALE<br>
+<input type="radio" name="Gender" value="Female" onclick="myFunction(this.value)">FEMALE<br>
+
+<button onclick="myFunction(this.value)" id="female">click me</button>
+<h1 id="female">show the selected gender</h1>
+<h1 id="male"></h1>
+
+<script type="text/javascript">
+	function myFunction(Gender) {
+		document.getElementById('male').value;
+		document.getElementById("female").innerHTML= Gender;
+	}
+</script>
+
+</body>
+</html>

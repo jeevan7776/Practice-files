@@ -1,0 +1,62 @@
+body
+{
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fresh-Background-Images-For-Business-Websites.jpg");
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fresh-Background-Images-For-Business-Websites.jpg");
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fresh-Background-Images-For-Business-Websites.jpg");
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fresh-Background-Images-For-Business-Websites.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.6))), url("http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fresh-Background-Images-For-Business-Websites.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fresh-Background-Images-For-Business-Websites.jpg");
+	background-size: cover;
+
+	color: #fff;
+}
+.center-text 
+{
+	text-align: center;
+}
+.text-size
+{
+	color: #eee;
+	font-size: 18px;
+}
+.small-top
+{
+	margin-top: 30px;
+}
+.small-bottom
+{
+	margin-bottom: 20px;
+}
+.loginbg
+{
+	background: #3c763d;
+	padding: 10px;
+}
+/*.loginbg:hover
+{
+	background: #000;
+	color: red;
+}*/
+h3:hover
+{
+color: red;
+}
+h4:hover{
+	color:blue;
+}
+.footer{
+	background-color: #ffffff;
+	color: black;
+	padding: 60px;
+}
+.text-size1
+{
+	color: #000;
+	font-size: 25px;
+}
+
+hr {
+    border-color: #F05F40;
+    border-width: 5px;
+    max-width: 100px;
+}

@@ -1,0 +1,153 @@
+<%= render 'careers/slider'%>
+<style>
+img{
+	height: 320px;
+	width: 100%
+}
+.hr1{
+				border:2px solid red;
+			}
+</style>
+<link rel="stylsheet" href='/assets/blog.css'/>
+<div class="content">
+	 <div class="container">
+		 <div class="content-grids">
+			 <div class="col-md-8 content-main">
+			 <% @blog.each do |blog| %>
+	
+				 <div class="content-grid">					 
+					 <div class="content-grid-info">
+						 <%= image_tag blog.blog_photos[0].image.url if blog.blog_photos.length > 0 %>
+						 <div class="post-info">
+						 <h4><a href="blogs/<%= blog.id%>"<% if blog.name.present? %>
+						 	
+    <h2 class="posted-view">Posted By <%= blog.name %></h2>		 
+ <% else %>	
+	<h2>Posted By Admin</h2>		
+<% end %>	
+</a> 
+
+
+<%= blog.created_at.to_time.strftime("%B %d, %Y") %> / <%= blog.comments.count %></h4>	
+
+<p><span class="more"><%= raw(blog.description) %></span></p>	
+<%= link_to blog do %>
+<span></span>READ MORE</a>	
+<%end%>
+</div>	
+</div>
+</div>
+<%end%>
+ </div>
+			  <!--/div-->
+			  <div class="col-md-4 content-right">
+			  	   <div class="section2">
+				 <div class="recent">
+					 <h3></h3>
+					 <ul>
+					 <%= render 'layouts/blogsidebar' %>
+
+					 <!--li><a href="#">Aliquam tincidunt mauris</a></li>
+					 <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
+					 <li><a href="#">Nunc dignissim risus consecu</a></li>
+					 <li><a href="#">Cras ornare tristiqu</a></li-->
+					 </ul>
+				 </div>
+
+				 <div class="comments">
+							 <h3><b>RECENT COMMENTS</b></h3>
+							 <hr class="hr1">
+					 <ul>
+					 	<% @blog.each do |blog|%>
+   <% blog.comments.each do |comment|%>
+    <%= link_to comment.gopi, blog_path(blog) %>
+  <% end %>
+<% end %>  
+					 <!--li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+					 <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+					 <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li-->
+					 </ul>
+				 </div>
+				 <div class="clearfix"></div>
+				 <div class="archives">
+					 <h3><b>ARCHIVES</b></h3>
+					 <hr class="hr1">
+					
+					 
+		<% @blog_months.sort.reverse.each do |month, blogs| %>
+		
+    
+	      	<h3><%=h link_to month.strftime("%B %Y"), blog_path(blogs), :class => "fa fa-arrow-right"%></h3>
+	      
+	       
+		
+	
+	<% end %>
+
+</div>
+
+    
+					 <!--ul>
+					 <li><a href="#">October 2013</a></li>
+					 <li><a href="#">September 2013</a></li>
+					 <li><a href="#">August 2013</a></li>
+					 <li><a href="#">July 2013</a></li>
+					 </ul>
+				 </div-->
+				 <!-- class="categories">
+				 
+
+					 <!--h3>CATEGORIES</h3>
+					 <ul>
+					 <li><a href="#">Vivamus vestibulum nulla</a></li>
+					 <li><a href="#">Integer vitae libero ac risus e</a></li>
+					 <li><a href="#">Vestibulum commo</a></li>
+					 <li><a href="#">Cras iaculis ultricies</a></li>
+					 </ul>
+				 </div-->
+				 <div class="clearfix"></div>
+			  </div>
+			  <div class="clearfix"></div>
+		  </div>
+	  
+	  </div>
+
+</div>
+<script>
+$(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 100;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Show more >";
+    var lesstext = "Show less";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
+</script>

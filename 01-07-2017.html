@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>01-07-2017</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="sty.css">
+</head>
+<style type="text/css">
+	.a:hover{
+		background-color: red !important;
+	}
+	.b:hover{
+		background-color: blue !important;
+	}
+	.c:hover{
+		background-color: green !important;
+	}
+
+/*hr {
+    border-color: #F05F40;
+    border-width: 5px;
+    max-width: 100px;
+}*/
+.bottom{
+	margin-bottom: 15px;
+}
+.dropdown ,.uppercase li , .tab-content h1 {
+	text-transform: uppercase;
+}
+</style>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			  <h2>Pagination</h2>                 
+			  <ul class="pagination">
+			  <li class="active"><a href="#">1</a></li>
+			  <li class="disabled"><a href="#">2</a></li>
+			  <li class="active"><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li class="active"><a href="#">5</a></li>
+			  <li><a href="#">6</a></li>
+			  
+			  </ul>
+		</div>
+		<div class="col-md-4">
+			  <h2>pagination large</h2>
+			    <ul class="pagination pagination-lg">
+			  <li class="active"><a href="#">1</a></li>
+			  <li class="disabled"><a href="#">2</a></li>
+			  <li class="active"><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li class="active"><a href="#">5</a></li>
+			  <li><a href="#">6</a></li>
+			  
+			  </ul>
+		</div>
+		<div class="col-md-4">
+			   <h3>pagination small</h3>
+			    <ul class="pagination pagination-sm">
+			  <li class="active"><a href="#">1</a></li>
+			  <li class="disabled"><a href="#">2</a></li>
+			  <li class="active"><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li class="active"><a href="#">5</a></li>
+			  <li><a href="#">6</a></li>
+			  </ul>
+		</div>
+	</div>
+	<hr>
+	  <h3>breadcrumb</h3>
+	  <ul class="breadcrumb">
+	  <li class="active">Home</li>
+	  <li><a href="#">About</a></li>
+	  <li><a href="#">Career</a></li>
+	 <li> <a href="#">Blog</a></li>
+	 </ul>
+	 <hr>
+	<h3>pager</h3>
+	  <ul class="pager">
+	  <li><a href="#" class="a">prev</a></li>
+	  <li><a href="#" class="a">next</a></li>
+	  </ul>
+ 	<hr>
+  	<h3>pager applying class to the li</h3>
+	<div class="col-md-6 col-md-offset-3">
+	  <ul class="pager">
+	  <li class="previous"><a href="#" class="a">previous</a></li>
+	  <li class="next"><a href="#" class="a">Next</a></li>  	
+	  </ul>
+	</div>
+</div>
+	<div class="container">
+		<div class="list-group">
+			<a href="#" class="list-group-item a">list-name</a>
+			<a href="#" class="list-group-item b">list-address</a>
+			<a href="#" class="list-group-item c">list-group</a>
+		</div>	
+		<ul class="list-group">
+		<li class="list-group-item">list-name</li>
+		<li class="list-group-item">list-address</li>
+		<li class="list-group-item">list-phone</li>		
+		</ul>
+		<div class="list-group">
+			<a class="list-group-item" href="#">
+			<h3 class="list-group-item-heading">list item heading</h3>
+			<p class="list-group-item-text">list item text</p>
+			</a> 
+			<a class="list-group-item" href="#">
+			<h3 class="list-group-item-heading">list item heading</h3>
+			<p class="list-group-item-text">list item text</p>
+			</a> 
+			<a class="list-group-item" href="#">
+			<h3 class="list-group-item-heading">list item heading</h3>
+			<p class="list-group-item-text">list item text</p>
+			</a>
+		</div>
+	</div>
+<div class="container">
+	<div class="panel-group">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2>panel heading</h2>
+			</div>
+			<div class="panel-body">
+				<h2>panel body</h2>
+			</div>
+			<div class="panel-footer">
+				<h2>panel footer</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container bottom">
+	<div class="dropdown">
+			<button class="btn btn-primary" data-toggle="dropdown" >WEB TECHNOLOGIES  <span class="caret"></span></button>	
+			<ul class="dropdown-menu">
+			<li class="dropdown-header">five technology</li>
+			<li><a href="#"> HTML</a></li>
+			<li><a href="#">CSS</a></li>
+			<li><a href="#">bootstrap</a></li>
+			<li><a href="#">javascript</a></li>
+			<li><a href="#">jquery</a></li>
+			 <li class="divider"></li>
+			<li class=""><a href="#">ANGULAR JS</a></li>	
+			</ul>	
+	</div>
+</div>
+
+<div class="container uppercase">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+				<ul class="nav nav-pills pills-info">
+				<li><a href="#home" data-toggle="tab">home</a></li>
+				<li><a href="#contact" data-toggle="tab">contact</a></li>
+				<li><a href="#about" data-toggle="tab">about us</a></li>
+				</ul>
+
+			<div class="tab-content">
+				<h1 class="tab-pane" id="home">HOME page lorem ipsum text</h1>
+				<h1 class="tab-pane" id="contact">contact page lorem ipsum</h1>
+				<h1 class="tab-pane" id="about">about us page lorem ipsum</h1>	
+			</div>
+		</div>
+	</div>	
+</div>
+
+<div class="container uppercase">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<ul class="nav nav-tabs">
+			<li><a href="#home1" data-toggle="tab">home</a></li>
+			<li><a href="#contact1" data-toggle="tab">contact</a></li>
+			<li><a href="#about1" data-toggle="tab">about us</a></li>
+			</ul>
+
+			<div class="tab-content">
+			<h1 class="tab-pane" id="home1">HOME page lorem ipsum text</h1>
+			<h1 class="tab-pane" id="contact1">contact page lorem ipsum</h1>
+			<h1 class="tab-pane" id="about1">about us page lorem ipsum</h1>	
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

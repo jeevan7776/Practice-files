@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="angularApp">
+<head>
+	<title>{{template}}</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head> 
+<body>
+<div ng-controller="myCtrl">
+<div  angular-directive></div><br/>
+<input ng-model="firstName"><br><br/>
+<input ng-model="lastName"><br>
+
+
+<h4>{{firstName}}</h4>
+<h4>{{lastName}}</h4>
+</div>
+
+<script>
+	var app = angular.module("angularApp", []);
+	app.controller("myCtrl", function($scope) {
+    $scope.firstName = "firstName";
+    $scope.lastName= "lastName";
+   
+});
+	app.directive("angularDirective", function() {
+		return {
+			template : "test directive"
+			
+		};
+	});
+</script>
+
+</body>
+</html>
+

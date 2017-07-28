@@ -1,0 +1,14 @@
+
+  <input type="radio"  name="rate"  onclick="myFunction(this.value)" 	value="Fixed Rate"> Fixed Rate<br>
+  <input type="radio"  name="rate"  onclick="myFunction(this.value)" 	value="Variable Rate"> Variable Rate<br>
+  <input type="radio"  name="rate"  onclick="myFunction(this.value)" 	 value="Multi Rate" checked="checked"> Multi Rate<br>  
+
+<h6 id="jeevan"></h6>
+<h1 id="reddy"></h1>
+
+<script>
+	function myFunction(rate) {
+		document.getElementById('jeevan').value = rate;
+		document.getElementById('reddy').innerHTML= rate;
+	}
+</script>

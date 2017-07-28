@@ -1,0 +1,39 @@
+body
+{
+	background: #eee;
+}
+.small-top
+{
+	margin-top: 25px;
+}
+.login-bg
+{
+	background: rgba(19, 35, 47, 0.9);
+	padding: 20px;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+	border-radius: 5px;
+}
+.white-text
+{
+	color: #fff;
+}
+.text-box
+{
+	background: none;
+	border-radius: 0;
+	height: 40px;
+
+}
+.submit-btn
+{
+	background: #337ab7;
+	width: 100%;
+	padding: 10px;
+	color: #fff;
+	border: none;
+	font-size: 20px;
+}
+.submit-btn:hover
+{
+	background: #000000;
+}

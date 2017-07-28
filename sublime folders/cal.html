@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>calculator</title>
+	
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div  class="col-md-6 col-md-offset-1">
+	ENTER THE COLOR NAME AND SEE THE COLOR:  <input style="background-color: {{color}}" ng-model="color" value="{{color}}" placeholder="Enter the color name">
+</div>
+</div>
+</div>
+ <div class="row">
+	<div class="col-md-5">
+	 <h1>ENTER THE NUMBERS HERE:</h1>
+		<p>Enter value:<input type="number" ng-model="number1"> {{number1}}</p>
+		<p>Enter value:<input type="number" ng-model="number2"> {{number2}}</p>
+		<p>Enter value:<input type="number" ng-model="number3"> {{number3}}</p>
+		<p>Enter value:<input type="number" ng-model="number4"> {{number4}}</p>
+		<p>Enter value:<input type="number" ng-model="number5"> {{number5}}</p>
+		<p>Enter value:<input type="number" ng-model="number6"> {{number6}}</p>
+		<p>Enter value:<input type="number" ng-model="number7"> {{number7}}</p>
+		<p>Enter value:<input type="number" ng-model="number8"> {{number8}}</p>
+		<p>Enter value:<input type="number" ng-model="number9"> {{number9}}</p>
+		<p>Enter value:<input type="number" ng-model="number10"> {{number10}}</p>
+	</div>
+
+	<div class="col-md-5">
+	<h1>ENTER THE NUMBERS HERE:</h1>
+	<p>Enter value:<input type="number" ng-model="number11"> {{number11}}</p>
+	<p>Enter value:<input type="number" ng-model="number12"> {{number12}}</p>
+	<p>Enter value:<input type="number" ng-model="number13"> {{number13}}</p>
+	<p>Enter value:<input type="number" ng-model="number14"> {{number14}}</p>
+	<p>Enter value:<input type="number" ng-model="number15"> {{number15}}</p>
+	<p>Enter value:<input type="number" ng-model="number16"> {{number16}}</p>
+	<p>Enter value:<input type="number" ng-model="number17"> {{number17}}</p>
+	<p>Enter value:<input type="number" ng-model="number18"> {{number18}}</p>
+	<p>Enter value:<input type="number" ng-model="number19"> {{number19}}</p>
+	<p>Enter value:<input type="number" ng-model="number20"> {{number20}}</p>
+  </div>
+
+	<div class="col-md-2">
+		<h3>TOTAL:</h3> </h6>{{number1 + number2 + number3 + number4 + number5 + number6 + number7 + number8 + number9 + number10 + number11 + number12 + number13 + number14 + number15 + number16 + number17 + number18 + number19 + number20}}</h6>
+		<!-- if we given numbers in input field then in expression we should give + or -- >
+<!-- if we given text in input field then in expression we should give --  >
+	 </div>
+
+</div>
+</div>
+</body>
+</html>

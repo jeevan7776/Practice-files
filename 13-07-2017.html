@@ -1,0 +1,69 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">  </script>
+<script>  
+$(document).ready(function(){  
+    $("#hide").click(function(){  
+        $("div").hide(10000);  
+    });  
+    $("#show").click(function(){
+    	$("div").show(10000);
+    });
+
+    $("p").css("background-color",'#eee');
+    $('p').css("font-size",'25px');
+    $("p").css('text-align','center');
+
+    $('#toggle').click(function(){
+    	$('div').toggle(1500);
+    });
+
+    $('#fadein').click(function(){
+    	$('div').fadeIn(1000);
+    });
+    $('#fadeout').click(function(){
+      	$("div").fadeOut(1000);
+    });
+     $('#fadetoggle').click(function(){
+      	$("div").fadeToggle(500);
+    });
+       $("#fadeto").click(function(){  
+        $("div").fadeTo("slow",0.5);  
+    });
+       $('#flip').click(function() {
+       	$('div').slideDown("slow");
+       });
+ $('#flipup').click(function() {
+       	$('div').slideUp("slow");
+       });
+
+
+
+});  
+
+</script>  
+</head>  
+<body>  
+<div>
+<p>  
+<b>This is a little poem: <br/>
+Twinkle, twinkle, little star<br/>
+ How I wonder what you are<br/>
+Up above the world so high<br/>
+Like a diamond in the sky <br/>
+</b>
+</p> 
+</div> 
+<button id="hide">Hide</button> &nbsp;
+<button id="show">Show</button> &nbsp;
+<button id= "toggle">toggle</button>
+<button id ="fadein">fadein</button>&nbsp;
+<button id="fadeout">fadeout</button>&nbsp;
+<button id="fadetoggle">fadetoggle</button>&nbsp;
+<button id ="fadeto">fadeto</button>&nbsp;
+<button id="flip">FLIP down</button>&nbsp;
+<button id="flipup">FLIP Up</button>&nbsp;
+
+</body>  
+</html>  
